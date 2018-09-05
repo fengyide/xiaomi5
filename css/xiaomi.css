@@ -2,7 +2,7 @@
 * @Author: 123
 * @Date:   2018-08-01 22:04:51
 * @Last Modified by:   123
-* @Last Modified time: 2018-09-04 23:19:00
+* @Last Modified time: 2018-09-05 09:10:21
 */
 *{
 	margin: 0;
@@ -316,7 +316,7 @@ input.wherea{
 	margin: auto;
 	width: 1200px;
 	height: 450px;
-	background: red;
+	/* background: red; */
 	overflow: hidden;
 	/* background-image: url('https://i1.mifile.cn/a4/xmad_15330559767656_Cuxjs.jpg'); */
 
