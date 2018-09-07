@@ -2,7 +2,7 @@
 * @Author: 123
 * @Date:   2018-09-03 17:47:52
 * @Last Modified by:   123
-* @Last Modified time: 2018-09-05 16:25:24
+* @Last Modified time: 2018-09-06 10:36:45
 */
 window.onload=function(){
 	//轮播图
@@ -510,13 +510,13 @@ let imgs=document.querySelectorAll('.bannerimg');
 		for (let e=0;e<topText.length;e++){
 			topText[e].onmouseenter=function(){
 				for (let f=0;f<topBox.length;f++){
-					topBox[f].style.display="none";
+					topBox[f].style.height=0;
 				}
-			topBox[e].style.display="block";
+			topBox[e].style.height="250px";
 				// console.log(topBox[e]);
 			}
 			topText[e].onmouseleave=function(){
-				topBox[e].style.display="none";
+				topBox[e].style.height="0";
 			}
 		}
 	// }
@@ -534,7 +534,7 @@ let imgs=document.querySelectorAll('.bannerimg');
 	// }
 	// 
 	//  
-	//  
+	//  家电
 	 let title=document.querySelectorAll(".all-title");
 	 let twoBox=document.querySelectorAll(".two-box");
 	 console.log(twoBox,title);
@@ -542,7 +542,7 @@ let imgs=document.querySelectorAll('.bannerimg');
 	 twoBox[0].style.zIndex=600;
 	 for(let f=0;f<title.length;f++){
 	 	title[f].onmouseenter=function(){
-	 		for(let g=0;g<twoBox.length;g++){
+	 		for(let g=0;g<title.length;g++){
 	 			twoBox[g].style.zIndex=500;
 	 			title[g].classList.remove("active1");
 	 		}
@@ -550,7 +550,7 @@ let imgs=document.querySelectorAll('.bannerimg');
 	 		title[f].classList.add("active1");
 	 	}
 	 	// title[f].onmouseleave=function(){
-	 	// 	twoBox[f].style.zIndex=599;
+	 	// 	twoBox[f].style.zIndex=500;
 	 	// 	title[f].classList.remove("active1");
 	 	// }
 	 }
