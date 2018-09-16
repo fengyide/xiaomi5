@@ -2,7 +2,7 @@
 * @Author: 123
 * @Date:   2018-09-03 17:47:52
 * @Last Modified by:   123
-* @Last Modified time: 2018-09-06 10:36:45
+* @Last Modified time: 2018-09-15 14:05:41
 */
 window.onload=function(){
 	//轮播图
@@ -555,4 +555,30 @@ let imgs=document.querySelectorAll('.bannerimg');
 	 	// }
 	 }
 
+
+
+	 //倒计时
+	 let box=document.querySelectorAll(".box1");
+	 let tt=setInterval(fn9,1000);
+	 function fn9(){
+	 	let arr=times();
+	 	box.forEach((e,i)=>{
+	 		e.innerHTML=arr[i];
+	 	})
+	 }
+	 fn9();
+	 function times(){
+	 let arr=[];
+	 let date=new Date();
+	 let day=new Date(2018,8,30);
+	 let time=Math.floor((day.getTime()-date.getTime())/1000); 
+	 let h=Math.floor((time%(60*60*24*30)%(60*60*24)/(60*60)));
+	 arr.push(h);
+	 let m=Math.floor((time%(60*60*24*30)%(60*60*24)%(60*60)/60));
+	 arr.push(m);
+	 let s=Math.floor((time%(60*60*24*30)%(60*60*24)%(60*60)%60));
+	 arr.push(s);
+	 // console.log(h,m,s,arr);
+	 return arr;
+	 }
 }
